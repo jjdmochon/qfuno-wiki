@@ -1,0 +1,243 @@
+/* ===== GENYO FUSION DESIGN SYSTEM for MkDocs Material ===== */
+
+/* === Color Scheme: Genyo === */
+[data-md-color-scheme="genyo"] {
+  --md-primary-fg-color: #008080;
+  --md-primary-fg-color--light: #3EB489;
+  --md-primary-fg-color--dark: #006666;
+  --md-primary-bg-color: #FFFFFF;
+  --md-accent-fg-color: #FF7F50;
+  --md-default-fg-color: #36454F;
+  --md-default-fg-color--light: #64748b;
+  --md-default-fg-color--lighter: #94a3b8;
+  --md-default-fg-color--lightest: #e2e8f0;
+  --md-default-bg-color: #F5F5F5;
+  --md-default-bg-color--light: #FFFFFF;
+  --md-default-bg-color--lighter: #FFFFFF;
+  --md-default-bg-color--lightest: #FFFFFF;
+
+  /* Tag pills */
+  --md-typeset-a-color: #008080;
+
+  /* Code */
+  --md-code-bg-color: #f1f5f9;
+}
+
+/* Slate overrides for Genyo dark mode */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #3EB489;
+  --md-primary-fg-color--light: #5cc9a0;
+  --md-primary-fg-color--dark: #008080;
+  --md-accent-fg-color: #FF7F50;
+}
+
+/* === Header Bar === */
+.md-header {
+  background: linear-gradient(135deg, #008080 0%, #36454F 100%) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.md-header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+.md-header__inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* === Tabs === */
+.md-tabs {
+  background: rgba(0, 128, 128, 0.15) !important;
+}
+
+[data-md-color-scheme="slate"] .md-tabs {
+  background: rgba(62, 180, 137, 0.1) !important;
+}
+
+/* === Hero Banner (Landing page) === */
+.md-typeset .hero-banner {
+  background: linear-gradient(135deg, #008080 0%, #36454F 100%);
+  color: white;
+  padding: 3rem 2.5rem;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 128, 128, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.md-typeset .hero-banner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.md-typeset .hero-banner h1 {
+  color: white !important;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.md-typeset .hero-banner p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  position: relative;
+}
+
+/* Logo in hero */
+.md-typeset .hero-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.2);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  margin-bottom: 1rem;
+}
+
+/* === Card Grid === */
+.md-typeset .card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.md-typeset .card {
+  background: var(--md-default-bg-color--light);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+.md-typeset .card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 6px;
+  background: #3EB489;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.md-typeset .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+}
+
+.md-typeset .card:hover::before {
+  transform: scaleX(1);
+}
+
+.md-typeset .card h3 {
+  margin-top: 0;
+  color: #36454F;
+  font-weight: 700;
+}
+
+.md-typeset .card p {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* Card color variants */
+.md-typeset .card-teal::before { background: #008080; }
+.md-typeset .card-blue::before { background: #3b82f6; }
+.md-typeset .card-emerald::before { background: #10b981; }
+.md-typeset .card-amber::before { background: #f59e0b; }
+.md-typeset .card-purple::before { background: #8b5cf6; }
+.md-typeset .card-coral::before { background: #FF7F50; }
+
+/* Icon wrappers inside cards */
+.md-typeset .card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.md-typeset .card:hover .card-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.md-typeset .icon-teal { background: rgba(0,128,128,0.1); color: #008080; }
+.md-typeset .icon-blue { background: rgba(59,130,246,0.1); color: #3b82f6; }
+.md-typeset .icon-emerald { background: rgba(16,185,129,0.1); color: #10b981; }
+.md-typeset .icon-amber { background: rgba(245,158,11,0.1); color: #f59e0b; }
+.md-typeset .icon-purple { background: rgba(139,92,246,0.1); color: #8b5cf6; }
+.md-typeset .icon-coral { background: rgba(255,127,80,0.1); color: #FF7F50; }
+
+/* === Admonitions Genyo Style === */
+.md-typeset .admonition.warning,
+.md-typeset details.warning {
+  border-color: #FF7F50;
+}
+
+.md-typeset .warning > .admonition-title,
+.md-typeset .warning > summary {
+  background-color: rgba(255, 127, 80, 0.1);
+}
+
+/* === Images === */
+.md-typeset img {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin: 1rem 0;
+  max-width: 100%;
+}
+
+/* === Tags === */
+.md-typeset .md-tag {
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+/* === Flashcards Interactive Container === */
+.flashcard-embed {
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  min-height: 750px;
+}
+
+/* === Search Focus State === */
+.md-search__input:focus {
+  border-color: #3EB489;
+  box-shadow: 0 0 0 3px rgba(62, 180, 137, 0.2);
+}
+
+/* === Footer === */
+.md-footer {
+  background: #36454F !important;
+}
+
+/* === Scrollbar Styling === */
+::-webkit-scrollbar-thumb {
+  background: #3EB489;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #008080;
+}

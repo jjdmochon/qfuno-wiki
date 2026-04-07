@@ -1,0 +1,114 @@
+site_name: QFUNO Wiki
+site_description: Wiki de Química Farmacéutica I — Curso 2025-2026, Universidad de Granada
+site_author: Prof. Mochón — Facultad de Farmacia, UGR
+site_url: https://example.github.io/qfuno-wiki/
+
+theme:
+  name: material
+  language: es
+  custom_dir: overrides
+  font:
+    text: Montserrat
+    code: JetBrains Mono
+  palette:
+    - scheme: genyo
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Modo oscuro
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.tooltips
+    - toc.follow
+  icon:
+    logo: material/flask-round-bottom
+    repo: fontawesome/brands/github
+  favicon: assets/logo.png
+
+extra:
+  social:
+    - icon: fontawesome/solid/graduation-cap
+      link: https://farmacia.ugr.es/
+      name: Facultad de Farmacia UGR
+  generator: false
+
+extra_css:
+  - stylesheets/genyo.css
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+plugins:
+  - search:
+      lang: es
+  - tags
+
+nav:
+  - Inicio: index.md
+  - Temas del Curso:
+    - "Tema 1 — Conceptos Básicos": themes/tema_1.md
+    - "Tema 2 — Nomenclatura": themes/tema_2.md
+    - "Tema 3 — Búsqueda del Prototipo": themes/tema_3.md
+  - Conceptos Clave:
+    - "SAR (Estructura-Actividad)": entities/sar.md
+    - "Droga, Fármaco y Medicamento": entities/droga_farmaco_medicamento.md
+    - "Fases Clínicas": entities/fases_clinicas.md
+    - "Clasificación ATC y DCI": entities/sistemas_clasificacion_atc.md
+    - "Sistemas Bicíclicos y β-Lactámicos": entities/sistemas_biciclicos_y_betalactamicos.md
+    - "Espiranos": entities/espiranos.md
+    - "Heterociclos": entities/heterociclos.md
+    - "SOSA y Serendipia": entities/sosa_y_serendipia.md
+    - "Diseño Racional y CADD": entities/diseno_racional_cadd.md
+  - Estudio Interactivo:
+    - "Flashcards — Tema 2": interactive/flashcards_tema_2.md
+    - "Flashcards — Tema 3": interactive/flashcards_tema_3.md
+  - Registro de Cambios: log.md
