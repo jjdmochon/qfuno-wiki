@@ -1,0 +1,80 @@
+/* QFUNO Wiki — Custom Styles */
+
+/* Hero banner on the landing page */
+.md-typeset .hero-banner {
+  background: linear-gradient(135deg, #4a148c 0%, #00695c 100%);
+  color: white;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 32px rgba(74, 20, 140, 0.25);
+}
+
+.md-typeset .hero-banner h1 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.md-typeset .hero-banner p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+}
+
+/* Card grid for navigation */
+.md-typeset .card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.md-typeset .card {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  padding: 1.25rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--md-default-bg-color);
+}
+
+.md-typeset .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  border-color: var(--md-primary-fg-color);
+}
+
+.md-typeset .card h3 {
+  margin-top: 0;
+  color: var(--md-primary-fg-color);
+}
+
+.md-typeset .card p {
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* Exam hints — highlighted blocks */
+.md-typeset .exam-hint {
+  background: linear-gradient(to right, #fff3e0, #fff8e1);
+  border-left: 4px solid #ff9800;
+  padding: 1rem 1.25rem;
+  border-radius: 0 8px 8px 0;
+  margin: 1rem 0;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .exam-hint {
+  background: linear-gradient(to right, rgba(255, 152, 0, 0.1), rgba(255, 152, 0, 0.05));
+}
+
+/* Smooth image rendering */
+.md-typeset img {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin: 1rem 0;
+  max-width: 100%;
+}
+
+/* Tags pill style */
+.md-typeset .md-tag {
+  border-radius: 999px;
+}
